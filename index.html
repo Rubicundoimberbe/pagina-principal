@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teorema de Pitágoras</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Teorema de Pitágoras</h1>
+    </header>
+
+    <main>
+        <article>
+            <section>
+                <h2>¿Qué es el Teorema de Pitágoras?</h2>
+                <p>El teorema de Pitágoras establece que, en un triángulo rectángulo, el área del cuadrado construido sobre la hipotenusa es igual a la suma de las áreas de los cuadrados construidos sobre los catetos.</p>
+                <ul>
+                    <li>a y b son los catetos</li>
+                    <li>c es la hipotenusa</li>
+                </ul>
+                <p><strong>a² + b² = c²</strong></p>
+                <img src="pitagoras.png" alt="Ilustración del Teorema de Pitágoras">
+            </section>
+
+            <section>
+                <h3>Calculadora de Pitágoras</h3>
+                <form id="pitagoras-form">
+                    <label for="catetoA">Cateto a:</label>
+                    <input type="number" id="catetoA" name="catetoA" required>
+                
+                    <label for="catetoB">Cateto b:</label>
+                    <input type="number" id="catetoB" name="catetoB" required>
+                
+                    <button type="button" onclick="calcularHipotenusa()">Calcular</button>
+                </form>
+                <p>Hipotenusa (c): <span id="resultado"></span></p>
+            </section>
+
+            <section>
+                <h2>Aplicaciones del teorema de Pitágoras</h2>
+                <h3>Calculando la hipotenusa</h3>
+                <p>Para calcular la hipotenusa, usamos la fórmula: c = √(a² + b²)</p>
+                <p>Ejemplo práctico:</p>
+                    <P>Supongamos que tienes un triángulo rectángulo con los catetos de longitud 3 y 4:</p>
+                    <P>1. Catetos: a=3, b=4</P>
+                    <P>2. Elevado al cuadrado: 3²=9 -  4²=16 </p>
+                    <p>3.Suma de los cuadrados: 9+16 = 25 </p>
+                    <p>4.Raìz cuadrada: c= √25 = 5 </p>
+                    <p>Por lo tanto, la longitud de la hipotenusa es 5.</p>
+                        
+                <h3>Calculando un cateto</h3>
+                <p>Conociendo la hipotenusa y un cateto, podemos calcular el otro cateto usando: a = √(c² - b²)</p>
+                <p>Ejemplo práctico</p>
+                 <p>Supongamos que tienes un triángulo rectángulo con la hipotenusa de longitud 5 y uno de los catetos (digamos b) de longitud 4, y deseas encontrar la longitud del otro cateto (a).</p>
+                 <p>1.	Hipotenusa: c=5c = 5c=5 </p>
+                 <p> 2.	Cateto conocido: b=4b = 4b=4</p>
+                 <p> 3.	Eleva la hipotenusa al cuadrado: c²=5²=25</p>
+                 <p> 4.	Resta el cuadrado del otro cateto: a²=25−4²=25−16=9</p>
+                 <p> 5.	Calcula la raíz cuadrada: a=√9=3</p>
+                 <p>  Por lo tanto, la longitud del cateto aaa es 3.</p>
+                
+
+                <h3>Clasificando triángulos rectángulos</h3>
+                <p>Un triángulo es rectángulo si cumple con la ecuación: a² + b² = c²</p>
+                <img src="Triangulo.png">
+            </section>
+
+            <section>
+                <h2>Pequeña historia acerca del Teorema de Pitágoras</h2>
+                <p>Según el proyecto “Derivación de las Matemáticas”, de la Universidad Estadual de Campinas (Unicamp), la evidencia muestra que el filósofo desarrolló y demostró matemáticamente el teorema alrededor del año 500 a.C. Sin embargo, los indios, egipcios y babilonios ya usaban esta característica de los triángulos rectángulos desde hace al menos mil años.</p>
+                <p>Una de las pruebas, según la iniciativa de la Unicamp, es una tablilla babilónica conocida como Plimpton 322, fechada en 1800 a.C. y conservada en la Universidad de Columbia, en Estados Unidos. Cientos de números alineados de a tres están grabados en el artefacto, y están relacionados de tal manera que el cuadrado de uno de ellos es siempre la suma de los cuadrados de los otros dos (a²=b²+c²).
+                El matemático griego, sin embargo, fue el primero en formular una ley universal para esta relación.</p>
+                <a href="https://www.nationalgeographicla.com/historia/2022/11/que-es-el-teorema-de-pitagoras" target="_blank">National Geographic</a>
+        
+        </article>
+
+        <aside>
+            <p>Páginas de Apoyo</p>
+        <a href="https://demre.cl/publicaciones/2024/pruebas-oficiales-paes-regular-p2024" target="_blank">Pruebas Oficiales PAES</a>
+        <p> </p>
+        <a href="https://www.youtube.com/channel/UCCY6xIXHmGBGZUgUYxtfKSg" target="_blank">Puntaje Nacional Canal de YouTube</a>
+        <p> </p>
+        <a href="https://www.geogebra.org/m/ydh6vepr" target="_blank"> Trios pitagoricos </a>
+        <p>-----------------------------------------------</p>
+        <img src="Pitagorass.png">
+
+        </aside>
+    </main>
+
+    <footer>
+        <p></p>
+    </footer>
+
+    <script>
+        function calcularHipotenusa() {
+            const catetoA = parseFloat(document.getElementById("catetoA").value);
+            const catetoB = parseFloat(document.getElementById("catetoB").value);
+            const hipotenusa = Math.sqrt(Math.pow(catetoA, 2) + Math.pow(catetoB, 2));
+            document.getElementById("resultado").textContent = hipotenusa.toFixed(2);
+        }
+    </script>
+</body>
+</html>
